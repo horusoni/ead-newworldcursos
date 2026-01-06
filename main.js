@@ -26,10 +26,24 @@ console.log(information[0])
 
 
 document.addEventListener("click", (e) => {
+    console.log(e.target.classList)
+    console.log(e.target.id)
+
+    if(e.target.classList[0] === "view-gride"){
+        document.querySelector(".win-gride").classList.add("win-gride-open")
+    }
+    if(e.target.classList[0] === "win-gride-close"){
+        document.querySelector(".win-gride").classList.remove("win-gride-open")
+    }
    
-     if(e.target.classList[0] === "add-btn"){
-            location.href="https://go.hotmart.com/R102362902R"
-        }
+    if(e.target.classList[0] === "add-btn"){
+        location.href="https://go.hotmart.com/R102362902R"
+    }
+
+    if(e.target.id === "more"){
+        location.href="https://go.hotmart.com/R102362902R"
+     
+    }
 
     if (e.target.id === "next") {
         title.classList.add("text-animado")
