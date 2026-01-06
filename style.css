@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.text-animado {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+
+
+
+html{
+    background-color: #d5d5d5;
+    height: 100dvh;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100dvh;
+    background-image: radial-gradient(#fff, rgb(192, 192, 192));
+    overflow: hidden;
+}
+#title-cont{
+    width: 430px;
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+#title-cont div{
+    position: absolute;
+    top: 50px;
+    color: rgba(0, 0, 0, 0.534);
+
+}
+
+#titulo{
+
+}
+#desc{
+    letter-spacing: 1px;
+    font-size: 20px;
+    
+}
+
+#circleBorder{
+    width: 100%;
+    height: 100%;
+    background:none;
+    position: absolute; 
+    border-radius: 50%;
+    top: -70%;
+    left: -70%;
+    border: 40px solid rgba(19, 111, 164, 0.685);
+
+}
+#circle-cont{
+    
+    width: 700px;
+    height: 700px;
+
+    position: relative;
+
+}
+
+#roll-circle{
+   
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 50%;
+    align-items: center;
+    transform: rotate(90deg);
+    transition: 1s;
+    
+ 
+}
+
+#roll-circle img{
+   
+    transform: rotate(-90deg);
+    filter: drop-shadow(0 0px 15px rgba(0, 0, 0, 0.457));
+    width: 180px;
+    padding: 30px;
+    z-index: 10;
+    
+   
+}
+
+#mesa{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#button-cont{
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+}
+
+#btn-hidden-cont{
+   
+    text-align: center;
+}
+#mob-btn-cont {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#cards-cont{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#cards-cont main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cards-cont main div{
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+    width: 75%;
+    border-radius: 30px;
+    height: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+}
+#cards-cont div img{
+    width: 60px;
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.201));
+}
+.cards{
+    background: radial-gradient(#ffffff, rgb(192, 192, 192));
+    transition: .5s;
+}
+
+.visu{
+    scale: 1.05;
+    background: radial-gradient(#ffffff, rgb(255, 255, 255));
+}
+
+
+
+.action-btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: none;
+    transition: .3s;
+}
+.action-btn:hover{
+    scale: 1.08;
+}
+.action-btn img{
+    width: 50px;
+}
+
+#side-card{
+    width:250px;
+    height: 300px;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0 0 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+#side-card img{
+    width: 100px;
+}
+#side-card button{
+    width: 90%;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #00a2ff;
+    box-shadow: 0px 4px 5px #07385576;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+.btn-mob{
+    display: none;
+}
+
+.add-btn-cont{
+    display: none;
+}
+
+
+
+#side-card button:hover{
+    transform: translateY(-5px);
+}
+
+
+.white-fade{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 2s;
+}
+
+.fade{
+    opacity: 0;
+}
+@media (max-width:1250px) {
+    *{
+    }
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* 🔒 remove scroll mobile */
+    }
+
+    /* impede estouro lateral causado por posicionamento negativo */
+    body {
+        position: relative;
+    }
+    .add-btn-cont{
+        display: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -60px;
+    }
+    
+    .add-btn{
+        cursor: pointer;
+        margin: 10px;
+        width: 200px;
+        height: 40px;
+        background-color: #00a2ff;
+        color: #fff;
+        border: none;
+        border-radius: 15px;
+        font-weight: bold;
+
+    }
+
+    .btn-web{
+        display: none;
+    }
+    .btn-mob{
+        display: initial;
+      
+        margin-top: -20px;
+    }
+
+    body{
+         background-image: radial-gradient(#fff, rgb(192, 192, 192));
+    }
+
+      #roll-circle{
+        top: -60%;
+        left: -60%;
+        justify-content: space-evenly;
+   
+        
+    }
+
+    #circleBorder{
+        top: -75%;
+        left: -75%;
+        border: 20px solid #4F8EB3;
+    }
+    #roll-circle img{
+        width: 90px;
+        margin: 50px;
+    }
+  
+    #side-card{
+        display: none;
+    }
+
+    #cards-cont{
+        height: 200px;
+        width: 100%;
+        bottom: 0;
+      
+    }
+    #cards-cont main div{
+        z-index: 10;
+       margin: 5px;
+       
+    }
+
+    
+
+  
+    #cards-cont{
+        left: 0;
+    }
+    .cards img{
+        width: 10px;
+    }
+
+     #title-cont{
+        width: 55%;
+        margin: 10px 0 0 0 ;
+        float: right;
+     }
+    #title-cont div{
+        text-align: right;
+        margin-right: 20px;
+        
+    }
+     #title-cont div h1{
+        font-size: 17px;
+     }
+    #title-cont div p{
+        font-size: 15px;
+    }
+}
